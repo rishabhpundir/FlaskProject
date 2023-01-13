@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock title %}
+{% block homeActive %}active{% endblock homeActive %}
+{% block content %}
+  <h1 class="text-center my-4">Hello World</h1>
+  <br>
+  <img src="{{url_for('static', filename='images/6f20a5943.jpg')}}" width=600 alt="">
+  <br>
+  <p id="demo">This is unchanged text.</p>
+{% endblock content %}

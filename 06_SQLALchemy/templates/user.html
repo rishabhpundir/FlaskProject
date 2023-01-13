@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}Name{% endblock title %}
+{% block userActive %}active{% endblock userActive %}
+{% block content %}
+  <h1 class="text-center my-4">User Form</h1>
+
+
+    <form method="post">
+      {{form.hidden_tag()}}
+      {{form.name.label(class="form-label")}}
+      {{form.name(class="form-control")}}
+      {{form.email.label(class="form-label")}}
+      {{form.email(class="form-control")}}
+      <br>
+      {{form.submit(class="btn btn-primary")}}
+    </form>
+
+    <br><br>
+    {% for user in users %}
+    {{user.id}}. {{user.name}} - {{user.email}} - {{user.date_added}}<br>
+    {% endfor %}
+  
+{% endblock content %}
